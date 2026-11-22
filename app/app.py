@@ -1,13 +1,10 @@
-import os
 
+import os
 from flask import Flask, jsonify
 
-# ===== VARIAÇÃO DA DUPLA =====
 NOME_DUPLA = "dupla-01"
 MENSAGEM = "Olá da dupla 01!"
 PORTA = 5000
-# =============================
-
 VERSAO = os.environ.get("APP_VERSION", "v1")
 
 app = Flask(__name__)
@@ -25,4 +22,3 @@ def aluno():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=PORTA)
-    
